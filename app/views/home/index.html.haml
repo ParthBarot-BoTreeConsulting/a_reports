@@ -1,0 +1,12 @@
+.container-narrow
+  .jumbotron
+    %h3 Enter twitter username and fetch his timeline 
+    %form{action: 'index', method: 'POST'}
+      %input.span3{type: 'text', name: 'twitter_username', placeholder: 'Enter Twitter username here', value: "#{params[:twitter_username]}"}
+      %br/
+      .input-prepend
+        / .add-on #
+        %input.span3{type: 'text', name: 'twitter_hashtag', placeholder: 'Enter hashtag here',value: "#{params[:twitter_hashtag]}"}
+      %br/
+      %input.btn.btn-large.btn-success{type: 'submit'}
+  = render :partial => 'results'      

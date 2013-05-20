@@ -1,0 +1,17 @@
+- if @timeline.present?
+  - @timeline.each do |item|
+    .text= simple_format(item.text)
+    %br/
+    %br/
+- if @search_results
+  %strong
+    Total tweets found for "#{params[:twitter_hashtag]}" : #{@search_results.size}
+  %br/
+  %br/
+  - @search_results.each do |k,v|
+    %strong
+      Message: 
+    #{simple_format(v[:msg])}
+    %strong
+      Total Retweets :
+    #{v[:retweet_count]}

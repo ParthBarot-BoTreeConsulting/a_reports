@@ -1,7 +1,7 @@
 .container-narrow
   .jumbotron
     %h3 Enter twitter username and fetch his timeline 
-    %form{action: 'index', method: 'POST'}
+    %form{action: "#{root_path}", method: 'POST'}
       %input.span3{type: 'text', name: 'twitter_username', placeholder: 'Enter Twitter username here', value: "#{params[:twitter_username]}"}
       %br/
       .input-prepend
